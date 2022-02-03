@@ -1,0 +1,103 @@
+/* La police de caractère */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Le corps de la page */
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 120%;
+  background: #222;
+}
+
+/* Le champ de recherche */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* L'encart d'affichage */
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 1em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 5s ease-in-out;
+}
+
+/* La barre de recherche */
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+/* Le bouton de recherche */
+button {
+  margin: 0.5em;
+  border: none;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  background: #999393d0;
+  color: white;
+  /* Pour le curseur qui pointe sur le bouton */
+  cursor: pointer;
+  /* Le surlignage du bouton de recherche */
+  transition: 0.25s ease-in-out;
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+/* La température */
+h1.temperature {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+/* L'icône */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* La description */
+.description {
+  text-transform: capitalize;
+  /* en majuscules */
+  margin-left: 10px;
+}
+/* Ne fait apparaître que la barre de recherche */
+.weather.loading {
+  visibility: hidden;
+  position: relative;
+  max-height: 25px;
+}
+
+.weather.loading::after {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  content: 'Wait for it ...';
+  color: white;
+}
